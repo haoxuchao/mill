@@ -1,0 +1,7 @@
+include ':app'
+include ':recordermanager'
+include':library'
+include ':base'
+include ':widget'
+include ':image'
+include ':dialog'

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="求购"
+        app:titleSize="18sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/edit_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+        <TextView
+            android:id="@+id/max_num_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_100"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_30"
+            android:text="最高数量"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_max_num"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/space_200"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:paddingLeft="@dimen/space_30"
+            android:paddingRight="@dimen/space_30"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@+id/max_num_tv"
+            app:layout_constraintTop_toTopOf="@+id/max_num_tv" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black10"
+            app:layout_constraintBottom_toBottomOf="@+id/max_num_tv"
+            android:layout_marginLeft="@dimen/space_30"
+            android:layout_marginRight="@dimen/space_30"/>
+        <TextView
+            android:id="@+id/min_num_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_100"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_30"
+            android:text="最低数量"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/max_num_tv" />
+
+        <EditText
+            android:id="@+id/edit_min_num"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/space_200"
+            android:background="@null"
+            android:hint="0"
+            android:inputType="number"
+            android:paddingLeft="@dimen/space_30"
+            android:paddingRight="@dimen/space_30"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@+id/min_num_tv"
+            app:layout_constraintTop_toTopOf="@+id/min_num_tv" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black10"
+            app:layout_constraintBottom_toBottomOf="@+id/min_num_tv"
+            android:layout_marginLeft="@dimen/space_30"
+            android:layout_marginRight="@dimen/space_30"/>
+        <TextView
+            android:id="@+id/price_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_100"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_30"
+            android:text="单价"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_min_num" />
+
+        <EditText
+            android:id="@+id/edit_price"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/space_200"
+            android:background="@null"
+            android:hint="0"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal"
+            android:paddingLeft="@dimen/space_30"
+            android:paddingRight="@dimen/space_30"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@+id/price_tv"
+            app:layout_constraintTop_toTopOf="@+id/price_tv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/push_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_88"
+        android:background="@drawable/btn_login_bg_select"
+        android:text="发布"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/space_62"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginRight="@dimen/space_30"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/edit_c"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

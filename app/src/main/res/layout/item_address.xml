@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_address"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文艺牙牙"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/black"
+        android:drawablePadding="@dimen/dp_10"
+        android:maxWidth="@dimen/space_360"
+        android:ellipsize="end"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/space_30"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18256789087"
+        android:textSize="@dimen/sp_14"
+        android:maxWidth="@dimen/space_240"
+        android:ellipsize="end"
+        android:layout_marginRight="@dimen/space_26"
+        app:layout_constraintRight_toLeftOf="@+id/shu_view"
+        app:layout_constraintBaseline_toBaselineOf="@+id/name"/>
+    <View
+        android:id="@+id/shu_view"
+        android:layout_width="0.5dp"
+        android:layout_height="@dimen/space_20"
+        android:background="@color/black10"
+        app:layout_constraintBottom_toBottomOf="@+id/phone"
+
+        app:layout_constraintRight_toLeftOf="@+id/edit_img"/>
+    <ImageButton
+        android:id="@+id/edit_img"
+        android:layout_width="@dimen/space_60"
+        android:layout_height="@dimen/space_60"
+        android:src="@mipmap/edit_address"
+        android:background="@null"
+        android:layout_marginRight="@dimen/space_30"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/phone"
+        app:layout_constraintBottom_toBottomOf="@+id/phone"/>
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14"
+        android:lines="1"
+        android:ellipsize="end"
+
+        android:layout_marginTop="@dimen/space_16"
+        android:text="陕西省西安市高新四路丹枫国际B座 拷贝"
+        app:layout_constraintLeft_toLeftOf="@+id/name"
+        app:layout_constraintRight_toRightOf="@+id/phone"
+        app:layout_constraintTop_toBottomOf="@+id/name"/>
+    <ImageView
+        android:id="@+id/default_address"
+        android:layout_width="@dimen/space_140"
+        android:layout_height="@dimen/space_34"
+
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/space_10"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        app:layout_constraintLeft_toLeftOf="@+id/address"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black10"
+        android:layout_marginTop="@dimen/space_10"
+        app:layout_constraintTop_toBottomOf="@+id/default_address"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

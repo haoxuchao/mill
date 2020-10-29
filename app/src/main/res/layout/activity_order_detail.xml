@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="订单详情"
+        app:titleSize="18sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/address_c"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_174"
+                android:layout_margin="@dimen/space_30"
+                android:background="@drawable/bg_white_r_5"
+                android:elevation="@dimen/space_2"
+                app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+                <TextView
+                    android:id="@+id/address_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_30"
+                    android:text="丁海寅"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/address_user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_30"
+                    android:text="16435870000"
+                    android:textColor="#666"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBottom_toBottomOf="@+id/address_user_name"
+                    app:layout_constraintLeft_toRightOf="@+id/address_user_name"
+                    app:layout_constraintTop_toTopOf="@+id/address_user_name" />
+
+                <TextView
+                    android:id="@+id/address_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_30"
+                    android:layout_marginTop="@dimen/space_20"
+                    android:layout_marginRight="@dimen/space_30"
+                    android:text="陕西省西安市浐灞区大家我就第三等级司机都会低 档次大家送301号"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintTop_toBottomOf="@+id/address_user_name" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include
+                layout="@layout/item_my_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_30"
+                app:layout_constraintTop_toBottomOf="@+id/address_c" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/order_info_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_30"
+                android:background="@drawable/bg_white_r_5"
+                android:elevation="@dimen/space_2"
+                app:layout_constraintTop_toBottomOf="@+id/item">
+
+                <TextView
+                    android:id="@+id/info_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_80"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/space_30"
+                    android:text="订单信息"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/order_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_60"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/space_30"
+                    android:text="订单编号：03995626"
+                    android:textColor="#666"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintTop_toBottomOf="@+id/info_tv" />
+
+                <TextView
+                    android:id="@+id/create_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_60"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/space_30"
+                    android:text="创建时间：2020-09-22 13:35:00"
+                    android:textColor="#666"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintTop_toBottomOf="@+id/order_no" />
+
+                <TextView
+                    android:id="@+id/pay_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_60"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/space_30"
+                    android:text="付款时间：2020-09-22 13:35:00"
+                    android:textColor="#666"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintTop_toBottomOf="@+id/create_time" />
+
+                <TextView
+                    android:id="@+id/send_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_60"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/space_30"
+                    android:text="发货时间：2020-09-22 13:35:00"
+                    android:textColor="#666"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintTop_toBottomOf="@+id/pay_time" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

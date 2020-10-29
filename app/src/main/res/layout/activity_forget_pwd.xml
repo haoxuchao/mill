@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rightColor="@color/black"
+        android:background="@color/transparent"
+        app:lineColor="@color/transparent"
+        app:rightTitle="保存"
+        app:title="忘记密码"
+        app:titleSize="18sp" />
+
+    <TextView
+        android:id="@+id/prompt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_50"
+        android:text="请输入手机号"
+        android:textColor="#666"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar" />
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"
+        android:background="@color/white"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:layout_marginTop="@dimen/space_20"
+        android:paddingLeft="@dimen/space_30"
+        android:paddingRight="@dimen/space_30"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintTop_toBottomOf="@+id/prompt1" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black10"
+        app:layout_constraintTop_toBottomOf="@+id/edit_phone" />
+
+    <EditText
+        android:id="@+id/edit_yzm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"
+        android:background="@color/white"
+        android:hint="请输入验证码"
+        android:maxLength="8"
+        android:paddingLeft="@dimen/space_30"
+        android:paddingRight="@dimen/space_30"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <com.hjq.widget.view.CountdownView
+        android:id="@+id/cv_password_forget_countdown"
+        style="@style/CountdownViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_2"
+        android:background="@color/white"
+        android:textColor="#A5A5A5"
+        app:layout_constraintRight_toRightOf="@+id/edit_yzm"
+        app:layout_constraintTop_toTopOf="@+id/edit_yzm"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_yzm"/>
+    <TextView
+        android:id="@+id/prompt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_50"
+        android:text="请输入新的支付密码"
+        android:textColor="#666"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_yzm" />
+    <com.hjq.widget.view.PasswordEditText
+        android:id="@+id/new_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"
+        android:background="@color/white"
+        android:hint="请输入新的密码(6位数）"
+        android:textSize="@dimen/sp_14"
+        android:inputType="textPassword"
+        android:maxLength="6"
+        android:paddingLeft="@dimen/space_30"
+        android:paddingRight="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_20"
+        app:layout_constraintTop_toBottomOf="@+id/prompt2"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black10"
+        app:layout_constraintBottom_toBottomOf="@+id/new_pwd"
+        android:layout_marginLeft="@dimen/space_26"
+        android:layout_marginRight="@dimen/space_26"/>
+    <com.hjq.widget.view.PasswordEditText
+        android:id="@+id/again_new_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"
+        android:background="@color/white"
+        android:hint="确认密码"
+        android:inputType="textPassword"
+        android:maxLength="6"
+        android:textSize="@dimen/sp_14"
+        android:paddingLeft="@dimen/space_30"
+        android:paddingRight="@dimen/space_30"
+        app:layout_constraintTop_toBottomOf="@+id/new_pwd"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

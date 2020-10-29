@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineColor="@color/transparent"
+        app:title="手机号"
+        app:titleSize="18sp" />
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_60"
+        android:text="更换手机号"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/space_26"
+        android:layout_marginTop="@dimen/space_106"
+        android:layout_marginRight="@dimen/space_26"
+        android:background="@color/black10"
+        app:layout_constraintTop_toBottomOf="@+id/prompt" />
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/space_26"
+        android:layout_marginTop="@dimen/space_116"
+        android:layout_marginRight="@dimen/space_26"
+        android:background="@color/black10"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+    <com.hjq.widget.view.CountdownView
+        android:id="@+id/cv_test_countdown"
+        style="@style/CountdownViewStyle"
+        android:layout_marginBottom="@dimen/space_20"
+        app:layout_constraintRight_toRightOf="@+id/view2"
+        app:layout_constraintBottom_toTopOf="@+id/view2"/>
+    <EditText
+        android:id="@+id/edit_yzm"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_80"
+        android:hint="验证码"
+        android:textSize="15sp"
+        android:background="@null"
+        android:layout_marginLeft="@dimen/space_24"
+        android:layout_marginRight="@dimen/space_24"
+        app:layout_constraintLeft_toLeftOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_test_countdown"
+        app:layout_constraintRight_toLeftOf="@+id/cv_test_countdown"/>
+    <TextView
+        android:id="@+id/gui_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+86"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@+id/view1"
+        app:layout_constraintLeft_toLeftOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="@+id/edit_phone" />
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_80"
+        android:background="@null"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingLeft="@dimen/space_24"
+        android:paddingRight="@dimen/space_24"
+        android:singleLine="true"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/view1"
+        app:layout_constraintLeft_toRightOf="@+id/gui_tv"
+        app:layout_constraintRight_toRightOf="@+id/view1" />
+    <TextView
+        android:id="@+id/bind_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_88"
+        android:text="绑定手机号"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center"
+        android:background="@drawable/btn_login_bg_select"
+        android:textColor="@color/white"
+        android:enabled="false"
+        android:layout_marginTop="@dimen/space_126"
+        android:layout_marginLeft="@dimen/space_76"
+        android:layout_marginRight="@dimen/space_76"
+        app:layout_constraintTop_toBottomOf="@+id/view2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

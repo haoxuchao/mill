@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.TestFragmentD">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tb_test_e_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backButton="false"
+        app:title="@string/home_nav_network" />
+
+
+</LinearLayout>

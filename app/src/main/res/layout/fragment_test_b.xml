@@ -1,0 +1,216 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.TestFragmentB"
+    tools:ignore="HardcodedText">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edit_seach"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_68"
+            android:layout_marginLeft="@dimen/space_30"
+            android:layout_marginRight="@dimen/space_120"
+            android:layout_marginBottom="@dimen/space_8"
+            android:background="@drawable/etbg_seach"
+            android:drawableLeft="@mipmap/sousuo"
+            android:drawablePadding="@dimen/space_10"
+            android:ellipsize="end"
+            android:hint="请输入你要寻找的商品"
+            android:paddingLeft="@dimen/space_24"
+            android:paddingRight="@dimen/space_100"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/btn_seach"
+            android:layout_width="@dimen/space_86"
+            android:layout_height="@dimen/space_60"
+            android:layout_marginRight="@dimen/space_4"
+            android:background="@drawable/btn_seach_bg"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_seach"
+            app:layout_constraintRight_toRightOf="@+id/edit_seach"
+            app:layout_constraintTop_toTopOf="@+id/edit_seach" />
+
+        <ImageView
+            android:id="@+id/gwc_img"
+            android:layout_width="@dimen/space_44"
+            android:layout_height="@dimen/space_38"
+            android:src="@mipmap/sc_gwc"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_seach"
+            app:layout_constraintLeft_toRightOf="@+id/edit_seach"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_seach" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/space_180"
+                    android:layout_marginLeft="@dimen/space_32"
+                    android:layout_marginTop="@dimen/space_30"
+                    android:layout_marginRight="@dimen/sp_14"
+                    android:background="@drawable/bg_white_r_5"
+                    android:elevation="@dimen/space_2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/view_2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/open_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_20"
+                        android:text="开通商铺"
+                        android:textColor="#181818"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/shengq_tv"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/open_shops_img" />
+
+                    <TextView
+                        android:id="@+id/shengq_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@mipmap/jiantou"
+                        android:drawablePadding="@dimen/space_10"
+                        android:text="立即申请"
+                        android:textColor="#388AFF"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/open_shops_img"
+                        app:layout_constraintLeft_toLeftOf="@+id/open_tv"
+                        app:layout_constraintTop_toBottomOf="@+id/open_tv" />
+
+                    <ImageView
+                        android:id="@+id/open_shops_img"
+                        android:layout_width="@dimen/space_120"
+                        android:layout_height="@dimen/space_120"
+                        android:layout_marginRight="@dimen/space_20"
+                        android:src="@mipmap/sc_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/hot_3"
+                        app:layout_constraintRight_toRightOf="@+id/open_shops_img"
+                        app:layout_constraintTop_toTopOf="@+id/open_shops_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/space_180"
+                    android:layout_marginLeft="@dimen/sp_14"
+                    android:layout_marginRight="@dimen/space_30"
+                    android:background="@drawable/bg_white_r_5"
+                    android:elevation="@dimen/space_2"
+                    app:layout_constraintLeft_toRightOf="@+id/view_1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view_1">
+
+                    <TextView
+                        android:id="@+id/jiaoyi_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_20"
+                        android:text="交易"
+                        android:textColor="#181818"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/jion_tv"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/jiaoyi_img" />
+
+                    <TextView
+                        android:id="@+id/jion_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@mipmap/jiantou_red"
+                        android:drawablePadding="@dimen/space_10"
+                        android:text="立即进入"
+                        android:textColor="#EA245C"
+                        android:textSize="@dimen/sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/jiaoyi_img"
+                        app:layout_constraintLeft_toLeftOf="@+id/jiaoyi_tv"
+                        app:layout_constraintTop_toBottomOf="@+id/jiaoyi_tv" />
+
+                    <ImageView
+                        android:id="@+id/jiaoyi_img"
+                        android:layout_width="@dimen/space_120"
+                        android:layout_height="@dimen/space_120"
+                        android:layout_marginRight="@dimen/space_20"
+                        android:src="@mipmap/jiaoyi_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/news_goods_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_100"
+                    android:layout_marginLeft="@dimen/space_30"
+                    android:drawableRight="@mipmap/news_icon"
+                    android:drawablePadding="@dimen/space_10"
+                    android:gravity="center_vertical"
+                    android:text="最新商品"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/news_goods_recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    app:layout_constraintTop_toBottomOf="@+id/news_goods_tv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

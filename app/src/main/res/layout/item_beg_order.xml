@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/space_30"
+    android:layout_marginTop="@dimen/space_20"
+    android:layout_marginRight="@dimen/space_30"
+    android:background="@drawable/bg_white_r_5"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_80"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_24"
+        android:text="发布日期：2020-09-24"
+        android:textColor="#666"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black10"
+        app:layout_constraintBottom_toBottomOf="@+id/time" />
+
+    <TextView
+        android:id="@+id/to_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_64"
+        android:layout_marginRight="@dimen/space_20"
+        android:background="@drawable/shopcar_delete_bg"
+        android:gravity="center"
+        android:paddingLeft="@dimen/space_30"
+        android:paddingRight="@dimen/space_30"
+        android:text="去支付"
+        android:textColor="#57ABF3"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/view_1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_64"
+        android:layout_marginRight="@dimen/space_20"
+        android:background="@drawable/shopcar_delete_bg"
+        android:gravity="center"
+        android:paddingLeft="@dimen/space_30"
+        android:paddingRight="@dimen/space_30"
+        android:text="取消发布"
+        android:textColor="#57ABF3"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/view_1"
+        app:layout_constraintRight_toLeftOf="@+id/to_pay"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/the_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/space_30"
+        android:text="已完成"
+        android:textColor="#666"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/view_1"
+        app:layout_constraintRight_toLeftOf="@+id/cancel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dzf_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:paddingBottom="@dimen/space_30"
+        app:layout_constraintTop_toBottomOf="@+id/view_1">
+
+        <TextView
+            android:id="@+id/prompt_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_24"
+            android:layout_marginTop="@dimen/space_30"
+            android:text="嘻嘻嘻向你出售10EB"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_24"
+            android:text="100 CNY"
+            android:textColor="#E81F4E"
+            app:layout_constraintBottom_toBottomOf="@+id/prompt_tv"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共计："
+            app:layout_constraintBottom_toBottomOf="@+id/price"
+            app:layout_constraintRight_toLeftOf="@+id/price" />
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_120"
+            android:layout_marginLeft="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_30"
+            android:layout_marginRight="@dimen/space_20"
+            android:background="@drawable/bg_hui_piao"
+            app:layout_constraintTop_toBottomOf="@+id/prompt_tv" />
+
+        <TextView
+            android:id="@+id/dzf_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_30"
+            android:text="数量：1-50"
+            android:textColor="#666"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toTopOf="@+id/dzf_dan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view_2" />
+
+        <TextView
+            android:id="@+id/dzf_dan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_30"
+            android:text="单价：10.0CNY"
+            android:textColor="#666"
+            android:textSize="@dimen/sp_14"
+
+            app:layout_constraintBottom_toBottomOf="@+id/view_2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dzf_num" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/n_dzf_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/space_30"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/view_1">
+        <TextView
+            android:id="@+id/n_dzf_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_30"
+            android:text="数量：1-50"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginTop="@dimen/space_30"
+            app:layout_constraintBottom_toTopOf="@+id/n_dzf_dan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/n_dzf_dan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_30"
+            android:text="单价：10.0CNY"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/n_dzf_num" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

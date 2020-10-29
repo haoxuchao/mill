@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="商品详情"
+        app:titleSize="18sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_car"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_772"
+                app:banner_indicator_gravity="right"
+                app:banner_indicator_marginBottom="@dimen/space_56"
+                app:banner_indicator_marginRight="@dimen/space_30"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_36"
+                android:background="@drawable/bg_white_tr_15"
+                app:layout_constraintBottom_toBottomOf="@+id/banner" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/space_30"
+                app:layout_constraintTop_toBottomOf="@+id/view_1">
+
+                <ImageView
+                    android:id="@+id/user_img"
+                    android:layout_width="@dimen/space_88"
+                    android:layout_height="@dimen/space_88"
+                    android:layout_marginLeft="@dimen/space_30"
+                    android:src="@color/gray"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/guanzhu"
+                    android:layout_width="@dimen/space_44"
+                    android:layout_height="@dimen/space_44"
+                    android:src="@mipmap/guanzhu"
+                    app:layout_constraintBottom_toBottomOf="@+id/user_img"
+                    app:layout_constraintLeft_toLeftOf="@+id/user_img"
+                    app:layout_constraintRight_toRightOf="@+id/user_img"
+                    app:layout_constraintTop_toBottomOf="@+id/user_img" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/space_30"
+                    android:text="45(EB)"
+                    android:textColor="#E81E4E"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toBottomOf="@+id/user_img"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/user_img" />
+
+                <TextView
+                    android:id="@+id/content_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_30"
+                    android:lineSpacingExtra="@dimen/space_10"
+                    android:text="全新，兰蔻极光水50ml\n兰蔻极光水中样50ml全新全新实拍国内专柜赠品支持专柜验货日期新鲜要的速度哦\n赠品无成本诚意出售\n1支25元包邮，3只70包邮\n3支相当于一瓶正装的\n柜正装150ml就要700大洋了\n需要一瓶直接拍下就好\n需要多瓶拍下喊我改价哦\n本交易仅支持自提、当面交易、邮寄本交易\n仅支持邮寄"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintTop_toBottomOf="@+id/guanzhu" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/add_car"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_88"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_48"
+        android:background="@drawable/bg_detail_left_btn"
+        android:gravity="center"
+        android:text="加入购物车"
+        android:textColor="#4A9BF0"
+        android:textSize="16sp"
+        android:layout_marginBottom="@dimen/space_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/now_pay" />
+
+    <TextView
+        android:id="@+id/now_pay"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_88"
+        android:layout_marginRight="@dimen/space_30"
+        android:background="@drawable/bg_detail_right_btn"
+        android:gravity="center"
+        android:text="立即购买"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/add_car"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/add_car" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
